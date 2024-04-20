@@ -1,8 +1,15 @@
 // import React from 'react'
+import { useGlobalContext } from "../useGlobalContext"
+
 
 const Favourite = () => {
+  const {favourite,selectMeal,deleteFavourite} = useGlobalContext();
   return (
-    <div>Ginger</div>
+   <section>
+    <div>
+      clas
+    </div>
+   </section>
   )
 }
 

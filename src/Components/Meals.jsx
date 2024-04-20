@@ -5,7 +5,7 @@ import { useGlobalContext } from "../useGlobalContext";
 import { FaRegThumbsUp } from "react-icons/fa6";
 const Meals = () => {
     
-    const {loading, meals, selectMeals} = useGlobalContext();
+    const {loading, meals, chooseMeal,addfavourite} = useGlobalContext();
 
     if (loading){
         return <section className="section">
@@ -28,10 +28,10 @@ const Meals = () => {
                 return(
                    <article key={idMeal} className="single-meal">
                     <img src={image} alt="image"  className="img" 
-                    onClick={()=> {selectMeals(idMeal, singleMeal)}}/>
+                    onClick={()=> {chooseMeal(idMeal)}}/>
                     <footer>
                         <h5>{title}</h5>
-                        <button className='like-btn'><FaRegThumbsUp />
+                        <button onClick={()=> addfavourite(idMeal)} className='like-btn'><FaRegThumbsUp />
                         </button>
                     </footer>
                    </article>
