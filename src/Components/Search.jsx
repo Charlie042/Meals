@@ -3,7 +3,7 @@ import { useState } from "react"
 import { useGlobalContext } from "../useGlobalContext"
 const Search = () => {
 
-const {setSearchTerm,fetchRandom} = useGlobalContext()
+const {setSearch,fetchRandom} = useGlobalContext()
 const [text,setText] = useState('');
 
 const handleChange = (e) =>{
@@ -12,12 +12,12 @@ const handleChange = (e) =>{
     const handleSubmit = (e) => {
         e.preventDefault();
         if(text) {
-            setSearchTerm(text)
+            setSearch(text)
         }
     }
     const handleRandom = () => {
         setText('')
-        setSearchTerm('')
+        setSearch('')
         fetchRandom()
     }
   return (
